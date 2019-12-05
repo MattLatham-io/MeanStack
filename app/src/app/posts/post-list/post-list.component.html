@@ -1,0 +1,13 @@
+<mat-accordion *ngIf="storedPosts.length > 0">
+  <mat-expansion-panel *ngFor="let post of storedPosts">
+    <mat-expansion-panel-header>
+      {{ post.title }}
+    </mat-expansion-panel-header>
+      {{ post.content }}
+      <mat-action-row>
+        <button mat-button color="">EDIT</button>
+        <button mat-button color="warn">DELETE</button>
+      </mat-action-row>
+    </mat-expansion-panel>
+</mat-accordion>
+<p class="info-text" *ngIf="storedPosts.length <= 0">No posts added yet!</p>
